@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AES File Encryption/Decryption</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="text-white">
+  <div class="bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-2xl w-full max-w-md">
+    <h1 class="text-3xl font-bold text-center mb-6">AES File Encryption/Decryption</h1>
+    
+    <div class="mb-4">
+      <label class="block text-sm font-medium text-white mb-1">Nhập khóa (độ dài bất kỳ)</label>
+      <input type="password" id="keyInput" class="mt-1 p-2 w-full border rounded-md bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nhập khóa của bạn">
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-sm font-medium text-white mb-1">Chọn file hoặc kéo thả</label>
+      <div id="dropZone" class="drop-zone p-4 rounded-md text-center cursor-pointer bg-white/10">
+        <input type="file" id="fileInput" class="hidden">
+        <p id="fileText">Nhấn để chọn file hoặc kéo thả tại đây</p>
+      </div>
+    </div>
+
+    <div class="flex justify-between mb-4">
+      <button id="encryptBtn" class="btn bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Mã hóa</button>
+      <button id="decryptBtn" class="btn bg-green-500 text-white p-2 rounded-md hover:bg-green-600">Giải mã</button>
+    </div>
+
+    <div id="status" class="text-center text-sm text-yellow-300"></div>
+    
+    <div id="downloadSection" class="mt-4 hidden text-center">
+      <p id="downloadMessage" class="text-sm text-white mb-2"></p>
+      <a id="downloadLink" class="btn bg-purple-500 text-white p-2 rounded-md hover:bg-purple-600">Tải xuống file</a>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

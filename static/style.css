@@ -1,0 +1,31 @@
+body {
+  /* Sử dụng ảnh base64 như mã gốc */
+  background-image: url('/static/anhaes.jfif');
+  /* Tùy chọn: Sử dụng ảnh từ thư mục static (nếu dùng Flask, đặt anhaes.jfif trong static/) */
+  /* background-image: url('/static/anhaes.jfif'); */
+  background-size: cover; /* Đảm bảo ảnh phủ toàn bộ màn hình */
+  background-position: center; /* Căn giữa ảnh */
+  background-repeat: no-repeat; /* Không lặp ảnh */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drop-zone {
+  border: 2px dashed #ccc;
+  transition: all 0.3s ease;
+}
+
+.drop-zone.dragover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #4CAF50;
+}
+
+.btn {
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
